@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: { default: CONTENT.meta.title, template: `%s · ${CONTENT.meta.siteName}` },
   description: CONTENT.meta.description,
   manifest: "/site.webmanifest",
-  icons: { icon: "/favicon.ico", apple: "/favicon.ico" },
+  // Icons: src/app/favicon.ico, icon.png and apple-icon.png (Next adds the tags).
   openGraph: { title: CONTENT.meta.title, description: CONTENT.meta.description, type: "website" },
 };
 

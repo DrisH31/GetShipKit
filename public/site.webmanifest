@@ -1,16 +1,21 @@
 {
   "name": "GetShipKit",
   "short_name": "GetShipKit",
-  "description": "The perfect starting point for your next project with GetShipKit.",
+  "description": "The free Next.js SaaS starter with payments and data already right.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#10b981",
+  "theme_color": "#0F766E",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "48x48 64x64 96x96 128x128 256x256",
-      "type": "image/x-icon"
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ]
 }
