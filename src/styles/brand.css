@@ -1,0 +1,50 @@
+/* Standards (web-design): COL-1 Text contrast · COL-2 Controls, icons and focus at 3:1 · COL-5 One accent, for action only · COL-12 The theme contract */
+/* =============================================================================
+   GETSHIPKIT — the brand, on top of the house "Neutral" look (tokens.css).
+
+   The theme contract: a product sets ONLY the action colour (--accent, --accent-ink,
+   --accent-hover, --focus), optionally --accent-text, and its mark's gradient, in both
+   schemes. Everything else (greys, inks, status, charts) stays the system's.
+
+   The colour is teal: settled, safe ("assured", DESIGN.md), and GetShipKit's existing
+   brand. It is the 10 %: the one primary button, the focus ring, the active plan
+   interval, the last step of the payment path, the mark. Never a heading, a band or
+   the navigation. OpenShipKit, the sibling, uses vermilion on the same system.
+
+   Measured (WCAG relative luminance, 3 Nov 2026):
+     light  accent-ink #FFF on accent #0F766E 5.47 · on hover #115E59 7.58
+            accent on bg #F2F2F2 4.89 · on card #FFF 5.47 · accent-text on bg 4.89
+     dark   accent-ink #FFF on accent #0D8278 4.69 · on hover #0B7068 5.95
+            accent on bg #171717 3.83 · surface #1D1D1D 3.60 · raised #262626 3.23 (controls ≥ 3)
+            accent-text / focus #2DD4BF on bg 9.63 · raised 8.13
+   ============================================================================= */
+
+:root,
+.light {
+  --accent: #0F766E;
+  --accent-ink: #FFFFFF;
+  --accent-hover: #115E59;
+  --focus: #0F766E;
+  --accent-text: #0F766E;
+  --brand-mark-from: #2DD4BF;
+  --brand-mark-to: #0F766E;
+}
+
+.dark,
+:root:not(.dark) .invert-scheme {
+  /* A deeper teal than the light scheme's text colour: the bright mint (#2DD4BF) as a
+     filled button outshouted everything on a dark page. Mint stays for text and focus. */
+  --accent: #0D8278;
+  --accent-ink: #FFFFFF;
+  --accent-hover: #0B7068;
+  --focus: #2DD4BF;
+  --accent-text: #2DD4BF;
+  --brand-mark-from: #5EEAD4;
+  --brand-mark-to: #14B8A6;
+}
+
+/* GetShipKit's display face (DESIGN.md, Type): Bricolage Grotesque, loaded by
+   next/font in src/app/layout.tsx. Text and code stay the system's (Inter, Geist Mono). */
+:root {
+  --font-display: var(--font-bricolage), "Bricolage Grotesque", system-ui, sans-serif;
+}

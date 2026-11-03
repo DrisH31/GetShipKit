@@ -1,0 +1,51 @@
+{
+  "name": "getshipkit",
+  "version": "2.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next-sitemap",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm run lint && npm run test"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "@clerk/nextjs": "^7.9.23",
+    "@heroicons/react": "^2.2.0",
+    "@polar-sh/nextjs": "^1.1.0",
+    "@polar-sh/sdk": "^1.0.2",
+    "@supabase/supabase-js": "^2.118.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^1.67.0",
+    "next": "16.4.4",
+    "next-sitemap": "^4.2.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "server-only": "^0.0.1",
+    "tailwind-merge": "^3.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.4",
+    "@types/node": "^24",
+    "@types/react": "^19.3",
+    "@types/react-dom": "^19.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "16.4.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.3.4",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "overrides": {
+    "prismjs": "^1.30.0"
+  }
+}

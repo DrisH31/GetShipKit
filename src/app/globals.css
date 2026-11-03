@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* The house design system (synced from the design-system library; version in
+   src/styles/DESIGN_SYSTEM_VERSION), then GetShipKit's accent on top.
+   Change a shared token in the design system, not here. GetShipKit-only colour
+   goes in brand.css; see DESIGN.md. */
+@import "../styles/tokens.css";
+@import "../styles/brand.css";
+@import "../styles/theme.css";
+@import "../styles/base.css";
+@import "../styles/motion.css";
+@import "../styles/overlays.css";
+
+/* Dark mode follows the `dark` class on <html> (set by the theme toggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+/* Hover needs a precise pointer too, not only a device that can hover. */
+@custom-variant hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
+/* The dashboard's page width (its pages still use `container`). */
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
