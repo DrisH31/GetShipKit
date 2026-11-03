@@ -12,8 +12,9 @@ import { ArrowUpRightIcon } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { ToolMarkIcon } from "@/components/sections/tool-mark-icon";
 import { CONTENT } from "@/config/content";
-import { SIBLING, SITE, SITE_LINKS, TEMPLATE_REPO, isShowcase } from "@/config/site";
+import { DRISH_LABS_URL, SIBLING, SITE, SITE_LINKS, TEMPLATE_REPO, isShowcase } from "@/config/site";
 import { cn } from "@/lib/utils";
+import { DrishLabsSignature } from "./drish-labs-signature";
 import { Logo } from "./logo";
 import { NewsletterForm } from "./newsletter-form";
 
@@ -157,6 +158,21 @@ export function SiteFooter() {
               </>
             )}
           </p>
+          {/* The maker's credit, on the showcase only: the studio's own signature, as on drishlabs.com. */}
+          {isShowcase && (
+            <a
+              href={DRISH_LABS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="A DRISH LABS project (drishlabs.com)"
+              className="group inline-flex w-fit items-center gap-3 sm:order-last"
+            >
+              <span className="text-small text-ink-3 transition-colors duration-(--dur-hover) group-hover:text-ink-2">A project by</span>
+              <span className="inline-flex h-10 items-center rounded-full px-4 text-ink ring-1 ring-line-strong ring-inset transition-colors duration-(--dur-hover) group-hover:bg-tonal pointer-coarse:h-11">
+                <DrishLabsSignature className="h-[1.125rem] w-auto" />
+              </span>
+            </a>
+          )}
           {socials.length > 0 && (
             <ul className="-mx-2 flex flex-wrap items-center gap-1" aria-label="Elsewhere">
               {socials.map(([key, href]) => (

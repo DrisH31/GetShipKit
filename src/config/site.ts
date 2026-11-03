@@ -21,6 +21,9 @@ export const SIBLING = {
 
 export const isShowcase = SITE.name === "GetShipKit";
 
+// The maker's credit in the footer, shown only while isShowcase: a renamed site never shows it.
+export const DRISH_LABS_URL = "https://drishlabs.com";
+
 export const SITE_LINKS = {
   social: {
     twitter: "",
