@@ -19,6 +19,8 @@ git clone https://github.com/DrisH31/GetShipKit.git my-saas
 cd my-saas && npm install && npm run dev      # builds and runs before you have any keys
 ```
 
+<a href="https://pages.razorpay.com/drishlabs"><img src="https://img.shields.io/badge/%E2%99%A5%20Back%20this%20project-0F766E?style=for-the-badge" alt="Back this project" height="28"></a>
+
 ## Contents
 
 1. [Security advisory: November 2026](#-security-advisory-november-2026)
@@ -39,7 +41,8 @@ cd my-saas && npm install && npm run dev      # builds and runs before you have 
 16. [Upgrading from 1.x](#upgrading-from-1x)
 17. [Troubleshooting](#troubleshooting)
 18. [What GetShipKit doesn't do (yet)](#what-getshipkit-doesnt-do-yet)
-19. [License](#license)
+19. [Back this project](#back-this-project)
+20. [License](#license)
 
 ## 🔒 Security advisory: November 2026
 
@@ -608,6 +611,15 @@ Honest limits, so you know what you'd add:
 | Error tracking | Read your host's logs, or add a service |
 | A Content Security Policy header | Add one carefully: Clerk needs its domains allowed |
 | A rate limit on the newsletter | Sign-ups are validated, but nothing slows a flood |
+
+## Back this project
+
+GetShipKit is free and MIT licensed, built and maintained by one developer. If it saved
+you time, you can back the work: ₹79, ₹199, ₹999 or an amount of your own, on a Razorpay
+page that takes UPI, netbanking and cards, Indian or international (charged in rupees).
+Paying unlocks nothing: everything is already in the repo.
+
+<a href="https://pages.razorpay.com/drishlabs"><img src="https://img.shields.io/badge/%E2%99%A5%20Back%20this%20project-0F766E?style=for-the-badge" alt="Back this project" height="28"></a>
 
 ## License
 
